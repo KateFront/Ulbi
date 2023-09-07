@@ -6,8 +6,8 @@ import {buildResolvers} from "./buildResolvers";
 import {buildDevServer} from "./buildDevServer";
 
 
-export function buildWebpackConfig(options: BuildOptions): webpack.Configuration{
-    const {paths, mode} = options;
+export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
+    const {paths, mode, isDev} = options;
     return {
         mode,
         entry: paths.entry,
@@ -18,10 +18,10 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         },
         plugins: buildPlugins(options),
         module: {
-            rules: buildLoaders(),
+            rules: buildLoaders(options),
         },
         resolve: buildResolvers(),
-        devtool: 'inline-source-map', //будем видеть где в коде ошибка
-        devServer: buildDevServer(options)
+        devtool: isDev ? 'inline-source-map' : undefined, //будем видеть где в коде ошибка
+        devServer: isDev ? buildDevServer(options) : undefined,
     }
 }
