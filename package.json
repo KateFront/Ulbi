@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
-    "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix"
+    "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
+    "unit": "jest --config ./config/jest/jest.config.ts"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,10 @@
   "devDependencies": {
     "@babel/core": "^7.22.17",
     "@babel/preset-env": "^7.22.15",
+    "@babel/preset-typescript": "^7.22.15",
+    "@jest/globals": "^29.7.0",
     "@svgr/webpack": "^8.1.0",
+    "@types/jest": "^29.5.5",
     "@types/node": "^17.0.21",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
@@ -46,6 +49,8 @@
     "eslint-plugin-react": "^7.33.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "mini-css-extract-plugin": "^2.7.6",
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2",
@@ -72,3 +77,4 @@
     "webpack-dev-server": "^4.7.4"
   }
 }
+
