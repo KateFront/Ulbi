@@ -22,5 +22,8 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         resolve: buildResolvers(options),
         devtool: isDev ? 'inline-source-map' : undefined, // будем видеть где в коде ошибка
         devServer: isDev ? buildDevServer(options) : undefined,
+        externals: {
+            'react': 'React'
+        },
     };
 }
