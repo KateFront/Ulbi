@@ -85,7 +85,6 @@
   "dependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@types/webpack-dev-server": "^4.7.2",
-    "babel-plugin-react-require": "^4.0.1",
     "i18next": "^23.5.1",
     "i18next-browser-languagedetector": "^7.1.0",
     "i18next-http-backend": "^2.2.2",
@@ -109,6 +108,11 @@
         "target": "chrome.app",
         "preset": "iPhone 7"
       }
+    }
+  },
+  "overrides": {
+    "loki": {
+      "@storybook/react": "$@storybook/react"
     }
   }
 }
