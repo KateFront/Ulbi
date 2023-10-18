@@ -92,3 +92,10 @@ export const Square: Story = {
 
     },
 };
+export const Disabled: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.OUTLINE,
+        square: true,
+    },
+};
