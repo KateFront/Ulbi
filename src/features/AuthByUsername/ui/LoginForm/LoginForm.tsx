@@ -5,6 +5,7 @@ import { Input } from 'shared/ui/Input/Input';
 import { useDispatch, useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import i18n from 'i18next';
 import { loginByUsername } from '../../model/services/loginByUserName/loginByUserName';
 import { getLoginState } from '../../model/selectors/getLoginState/getLoginState';
 import { loginActions } from '../../model/slice/loginSlice';
@@ -38,7 +39,7 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
         <div className={classNames(cls.LoginForm, {}, [className])}>
             <Text title={t('Форма авторизации')} />
 
-            {error && <Text text={error} theme={TextTheme.ERROR} />}
+            {error && <Text text={i18n.t('Вы ввели неверный логин или пароль')} theme={TextTheme.ERROR} />}
             <Input
                 autofocus
                 type="text"
