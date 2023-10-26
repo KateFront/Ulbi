@@ -1,11 +1,10 @@
 .Button {
   cursor: pointer;
   color: var(--primary-color);
-  padding: 10px 15px;
+  padding: 6px 15px;
 }
 
-.clear,
-.clearInverted {
+.clear {
   padding: 0;
   border: none;
   background: none;
@@ -13,6 +12,10 @@
 }
 
 .clearInverted {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
   color: var(--inverted-primary-color);
 }
 
@@ -22,15 +25,15 @@
   background: none;
 }
 
-.backgroundInverted {
-  background: var(--inverted-bg-color);
+.background {
+  background: var(--bg-color);
   color: var(--primary-color);
   border: none;
 }
 
-.background {
-  background: var(--bg-color);
-  color: var(--primary-color);
+.backgroundInverted {
+  background: var(--inverted-bg-color);
+  color: var(--inverted-primary-color);
   border: none;
 }
 
@@ -41,33 +44,30 @@
 .square.size_m {
   width: var(--font-line-m);
   height: var(--font-line-m);
-  font: var(--font-m);
 }
 
 .square.size_l {
   width: var(--font-line-l);
   height: var(--font-line-l);
-  font: var(--font-l);
 }
 
 .square.size_xl {
   width: var(--font-line-xl);
   height: var(--font-line-xl);
-  font: var(--font-xl);
 }
 
 .size_m {
-  font: var(--font-m)
+  font: var(--font-m);
 }
 
 .size_l {
-  font: var(--font-l)
+  font: var(--font-l);
 }
 
 .size_xl {
-  font: var(--font-xl)
+  font: var(--font-xl);
 }
 
 .disabled {
-  opacity: 0;
+  opacity: 0.5;
 }
