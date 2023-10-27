@@ -15,5 +15,9 @@ export function useTheme(): UseThemeResult {
         document.body.className = newTheme;
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     };
-    return { theme, toggleTheme };
+
+    return {
+        theme,
+        toggleTheme,
+    };
 }
