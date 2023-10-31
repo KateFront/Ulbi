@@ -9,15 +9,15 @@ import 'app/styles/index.scss';
 import 'shared/config/i18n/i18n';
 
 const container = document.getElementById('root');
-const root = createRoot(container);
+const root = createRoot(container as HTMLElement);
 root.render(
-    <StoreProvider>
-        <BrowserRouter>
+    <BrowserRouter>
+        <StoreProvider>
             <ErrorBoundary>
                 <ThemeProvider>
                     <App />
                 </ThemeProvider>
             </ErrorBoundary>
-        </BrowserRouter>
-    </StoreProvider>,
+        </StoreProvider>
+    </BrowserRouter>,
 );

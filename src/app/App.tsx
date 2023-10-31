@@ -6,7 +6,6 @@ import { Sidebar } from 'widgets/Sidebar';
 import { useTheme } from 'app/providers';
 import { useDispatch } from 'react-redux';
 import { userActions } from 'entities/User';
-import { Counter } from 'entities/Counter';
 
 const App = () => {
     const { theme } = useTheme();
