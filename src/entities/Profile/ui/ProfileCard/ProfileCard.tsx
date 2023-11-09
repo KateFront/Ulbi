@@ -5,6 +5,7 @@ import { Input } from 'shared/ui/Input/Input';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Currency, CurrencySelect } from 'entities/Currency';
 import { Country, CountrySelect } from 'entities/Country';
+import { Loader } from 'widgets/Loader/Loader';
 import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/profile';
 
@@ -45,7 +46,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
     if (isLoading) {
         return (
             <div className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}>
-                {/* <Loader /> */}
+                <Loader />
             </div>
         );
     }
