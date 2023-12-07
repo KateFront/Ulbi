@@ -1,4 +1,5 @@
 {
+  "": "",
   "PROFILE PAGE": "PROFILE PAGE",
   "decrement": "decrement",
   "increment": "increment",
@@ -18,6 +19,8 @@
   "Город": "City",
   "Данные не указаны": "Data not provided",
   "Имя и фамилия обязательны": "First and last name are required",
+  "Комментарии": "Комментарии",
+  "Комментарии отсутствуют": "Комментарии отсутствуют",
   "Некорректный возраст": "Incorrect age",
   "Некорректный регион": "Incorrect region",
   "О сайте": "About us",

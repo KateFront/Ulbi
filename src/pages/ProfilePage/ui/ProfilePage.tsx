@@ -7,7 +7,7 @@ import {
     ProfileCard,
     profileReducer, ValidateProfileError,
 } from 'entities/Profile';
-import { useAppDispatch } from 'app/hooks/useAppDispatch/useAppDispatch';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/Currency';
